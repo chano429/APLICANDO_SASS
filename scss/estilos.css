@@ -54,7 +54,7 @@ footer h2 {
       align-self: center;
 }
 
-footer__card {
+footer.footer__card {
   width: 50px;
   height: 50px;
   padding: 10px;
