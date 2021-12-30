@@ -9,11 +9,16 @@ body {
 #plantilla {
   display: grid;
   height: 100vh;
-  grid-template-areas: "header header header"  "subMenu producto publicidad" "subMenu torneos publicidad" "footer footer footer";
+  grid-template-areas: 
+    "header header header" 
+  "subMenu producto publicidad"
+  "subMenu torneos publicidad"
+  "footer footer footer";
   grid-template-rows: 100px 5fr 1fr 80px;
   grid-template-columns: 0.4fr 3fr 0.4fr;
   grid-column-gap: 5px;
-  grid-row-gap: 5px; }
+  grid-row-gap: 5px;
+}
 
 header {
   grid-area: header; }
@@ -31,8 +36,8 @@ footer {
     align-self: center; }
 
 .footer__card {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   padding: 10px;
   margin: 10px;
   border-style: solid;
@@ -44,12 +49,9 @@ footer {
   justify-content: flex-end;
   align-items: center;
   background-color: #071B33;
-  font-family: Oxygen; }
+  font-family: Oxygen;}
   .menu____item {
     list-style: none; }
-  .menu__lista__item a {
-    text-decoration: none;
-    color: whitesmoke; }
   .menu ul {
     display: flex;
     justify-content: space-evenly; }
@@ -57,9 +59,14 @@ footer {
     display: inline;
     padding: 10px 10px;
     border-radius: 15px;
-    background-color: hotpink; }
+    background-color: #071B33; }
   .menu ul li:hover {
     background-color: tomato; }
+
+
+#colorTextoBotones{
+  color: whitesmoke; 
+}
 
 #productos {
   grid-area: producto;
@@ -78,41 +85,33 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
   #subMenu p {
     font-family: Oxygen;
     color: whitesmoke;
     text-align: justify;
     font-size: x-large;
     padding: 15px;
-    line-height: 200%; }
+    line-height: 200%;
+  }
 
 .publicidad {
   grid-area: publicidad;
   display: flex;
   padding: 10px 10px;
   align-items: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap; }
 
 .border-items {
-  border: 3px;
+  border: 1px;
   border-color: white;
-  border-style: solid; }
-
-.forma {
-  padding-top: 50px;
-  overflow: hidden; }
-
-.forma__cubo {
   border-style: solid;
-  border-radius: 10%;
-  padding: 15px;
-  width: 100px;
-  height: 100px;
-  background-color: tomato;
-  margin: 10px; }
+  border-radius: 5px;
+}
+
 
 #logo {
   grid-area: logo; }
@@ -159,4 +158,60 @@ footer {
 
 .card {
   width: 100px;
-  height: 300px; }
+  height: 300px;
+}
+
+@media (max-width: 320px), handheld{
+  #plantilla {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    " header" 
+    " subMenu"
+    " producto"
+    " torneos"
+    " publicidad"
+    " footer";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+  }
+}
+
+@media (min-width:321px) and (max-width:768px), handheld{
+  #plantilla {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    " header header" 
+    " subMenu producto"
+    " subMenu publicidad"
+    " subMenu torneos"
+    " subMenu torneos"
+    " footer footer";
+    grid-template-rows: auto;
+    grid-template-columns: 0.4fr 3fr 0.4fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+@media (min-width: 769px) and (max-width:997px), handheld{
+      #plantilla {
+      display: grid;
+      height: 100vh;
+      grid-template-areas: 
+      " header header" 
+      " subMenu producto"
+      " subMenu torneos"
+      " subMenu publicidad"
+      " footer footer";
+      grid-template-rows: auto;
+      grid-template-columns: 0.4fr 3fr 0.4fr;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+    }
+  }
+
+  
