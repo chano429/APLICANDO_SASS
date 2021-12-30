@@ -10,7 +10,7 @@ body {
   display: grid;
   height: 100vh;
   grid-template-areas: 
-    "header header header" 
+  "header header header" 
   "subMenu producto publicidad"
   "subMenu torneos publicidad"
   "footer footer footer";
@@ -87,7 +87,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-  #subMenu p {
+  #subMenu h1 {
     font-family: Oxygen;
     color: whitesmoke;
     text-align: justify;
